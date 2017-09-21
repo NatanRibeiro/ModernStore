@@ -1,6 +1,10 @@
-﻿using ModernStore.Domain.Entities;
+﻿using ModernStore.Domain.CommandHandlers;
+using ModernStore.Domain.Commands;
+using ModernStore.Domain.Entities;
+using ModernStore.Domain.Repositories;
 using ModernStore.Domain.ValueObjects;
 using System;
+using System.Collections.Generic;
 
 namespace ModernStore
 {
@@ -8,36 +12,71 @@ namespace ModernStore
     {
         static void Main(string[] args)
         {
-            var name = new Name("Natan", "Dutra");
-            var email = new Email("natan_r.dutra@hotmail.com");
-            var document = new Document("1234567890");
-            var user = new User("natan.dutra", "123456789");
-            var customer = new Customer(name, email, document, user);
-            var mouse = new Product("mouse", 299, "mouse.png", 20);
-            var mousePad = new Product("mouse pad", 23, "mouse.png", 20);
-            var teclado = new Product("teclado", 333, "mouse.png", 20);
+            var command = new RegisterOrderCommand
+            {
+                Customer = Guid.NewGuid(),
+                DeliveryFee = 9,
+                Discount = 30,
+                Items = new List<RegisterOrderItemCommand>
+                {
+                    new RegisterOrderItemCommand
+                    {
+                        Product = Guid.NewGuid(),
+                        Quantity = 3
+                    }
+                }
+            };
 
-            Console.WriteLine($"Previously, the quantity on hand was for Mouse was: { mouse.QuantityOnHand}");
-            Console.WriteLine($"Previously, the quantity on hand was for Mouse Pad was: { mousePad.QuantityOnHand}");
-            Console.WriteLine($"Previously, the quantity on hand was for Teclado was: { teclado.QuantityOnHand}");
+            GenerateOrder(
+                new FakeCustomerRepository(),
+                new FakeProductRepository(),
+                new FakeOrderRepository(),
+                command);
 
-            var order = new Order(customer, 8, 10);
-            order.AddItem(new OrderItem(mouse, 2));
-            order.AddItem(new OrderItem(mousePad, 2));
-            order.AddItem(new OrderItem(teclado, 2));
-
-            Console.WriteLine($"Numero do Pedido: {order.Number}");
-            Console.WriteLine($"Order  Date: {order.CreateDate : dd/MM/yyyy}");
-            Console.WriteLine($"Discount: {order.Discount}");
-            Console.WriteLine($"Delivery Fee: {order.DeliveryFee}");
-            Console.WriteLine($"Sub Total: {order.SubTotal()}");
-            Console.WriteLine($"Total: {order.Total()}");
-            Console.WriteLine($"Client: {order.Customer.Name.ToString()}");
-
-            Console.WriteLine($"Now, the quantity on hand was for Mouse is: { mouse.QuantityOnHand}");
-            Console.WriteLine($"Now, the quantity on hand was for Mouse Pad is: { mousePad.QuantityOnHand}");
-            Console.WriteLine($"Now, the quantity on hand was for Teclado is: { teclado.QuantityOnHand}");
             Console.ReadKey();
+        }
+
+        public static void GenerateOrder(ICustomerRepository customerRepository, IProductRepository productRepository, IOrderRepository orderRepository, RegisterOrderCommand command)
+        {
+            var handler = new OrderCommandHandler(customerRepository, productRepository, orderRepository);
+            handler.Handle(command);
+
+            if (handler.IsValid())
+                Console.WriteLine("Your order has been submitted");
+        }
+
+        public class FakeProductRepository : IProductRepository
+        {
+            public Product Get(Guid id)
+            {
+                return new Product("Mouse", 299, string.Empty, 50);
+            }
+        }
+
+        public class FakeOrderRepository : IOrderRepository
+        {
+            public void Save(Order order)
+            {
+
+            }
+        }
+
+        public class FakeCustomerRepository : ICustomerRepository
+        {
+            public Customer Get(Guid id)
+            {
+                return null;
+            }
+
+            public Customer GetByUserId(Guid id)
+            {
+                return new Customer(
+                    new Name("Natan", "Dutra"),
+                    new Email("natan_r.dutra@hotmail.com"),
+                    new Document("72546524135"),
+                    new User("natan.dutra", "123456789")
+                    );
+            }
         }
     }
 }

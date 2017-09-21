@@ -6,3 +6,11 @@ D:\Dev\ModernStore\ModernStore\ModernStore.Domain\bin\Debug\ModernStore.Shared.p
 D:\Dev\ModernStore\ModernStore\ModernStore.Domain\obj\Debug\ModernStore.Domain.csprojResolveAssemblyReference.cache
 D:\Dev\ModernStore\ModernStore\ModernStore.Domain\obj\Debug\ModernStore.Domain.dll
 D:\Dev\ModernStore\ModernStore\ModernStore.Domain\obj\Debug\ModernStore.Domain.pdb
+D:\Dev\ModernStore\ModernStore.Domain\bin\Debug\ModernStore.Domain.dll
+D:\Dev\ModernStore\ModernStore.Domain\bin\Debug\ModernStore.Domain.pdb
+D:\Dev\ModernStore\ModernStore.Domain\bin\Debug\FluentValidator.dll
+D:\Dev\ModernStore\ModernStore.Domain\bin\Debug\ModernStore.Shared.dll
+D:\Dev\ModernStore\ModernStore.Domain\bin\Debug\ModernStore.Shared.pdb
+D:\Dev\ModernStore\ModernStore.Domain\obj\Debug\ModernStore.Domain.csprojResolveAssemblyReference.cache
+D:\Dev\ModernStore\ModernStore.Domain\obj\Debug\ModernStore.Domain.dll
+D:\Dev\ModernStore\ModernStore.Domain\obj\Debug\ModernStore.Domain.pdb

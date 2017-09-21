@@ -9,3 +9,14 @@ D:\Dev\ModernStore\ModernStore\ModernStore.Console\bin\Debug\ModernStore.Domain.
 D:\Dev\ModernStore\ModernStore\ModernStore.Console\bin\Debug\ModernStore.Shared.pdb
 D:\Dev\ModernStore\ModernStore\ModernStore.Console\obj\Debug\ModernStore.Console.exe
 D:\Dev\ModernStore\ModernStore\ModernStore.Console\obj\Debug\ModernStore.Console.pdb
+D:\Dev\ModernStore\ModernStore.Console\bin\Debug\ModernStore.Console.exe.config
+D:\Dev\ModernStore\ModernStore.Console\bin\Debug\ModernStore.Console.exe
+D:\Dev\ModernStore\ModernStore.Console\bin\Debug\ModernStore.Console.pdb
+D:\Dev\ModernStore\ModernStore.Console\bin\Debug\FluentValidator.dll
+D:\Dev\ModernStore\ModernStore.Console\bin\Debug\ModernStore.Domain.dll
+D:\Dev\ModernStore\ModernStore.Console\bin\Debug\ModernStore.Shared.dll
+D:\Dev\ModernStore\ModernStore.Console\bin\Debug\ModernStore.Domain.pdb
+D:\Dev\ModernStore\ModernStore.Console\bin\Debug\ModernStore.Shared.pdb
+D:\Dev\ModernStore\ModernStore.Console\obj\Debug\ModernStore.Console.csprojResolveAssemblyReference.cache
+D:\Dev\ModernStore\ModernStore.Console\obj\Debug\ModernStore.Console.exe
+D:\Dev\ModernStore\ModernStore.Console\obj\Debug\ModernStore.Console.pdb
