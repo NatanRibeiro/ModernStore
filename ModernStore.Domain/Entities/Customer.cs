@@ -33,6 +33,11 @@ namespace ModernStore.Domain.Entities
 
         public User User { get; private set; }
 
+        internal void Update(Name name, object birthdate)
+        {
+            throw new NotImplementedException();
+        }
+
         public Email Email { get; private set; }
 
         public Document Document { get; private set; }

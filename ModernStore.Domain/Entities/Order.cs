@@ -32,10 +32,6 @@ namespace ModernStore.Domain.Entities
                 _items.Add(item);
         }
 
-        public decimal SubTotal() => Items.Sum(x => x.Total());
-
-        public decimal Total() => SubTotal() + DeliveryFee - Discount;
-
         private readonly IList<OrderItem> _items;
 
         public DateTime CreateDate { get; private set; }
@@ -51,5 +47,9 @@ namespace ModernStore.Domain.Entities
         public decimal Discount { get; private set; }
 
         public Customer Customer { get; private set; }
+
+        public decimal SubTotal() => Items.Sum(x => x.Total());
+
+        public decimal Total() => SubTotal() + DeliveryFee - Discount;
     }
 }

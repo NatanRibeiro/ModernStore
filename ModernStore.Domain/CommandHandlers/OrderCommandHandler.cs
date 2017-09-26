@@ -21,9 +21,11 @@ namespace ModernStore.Domain.CommandHandlers
 
         public void Handle(RegisterOrderCommand command)
         {
+            //Step 1 - Check if already exists
             var customer = _customerRepository.GetByUserId(command.Customer);
             var order = new Order(customer, command.DeliveryFee, command.Discount);
 
+            //Step 2 - Update the entity
             foreach (var item in command.Items)
             {
                 var product = _productRepository.Get(item.Product);
@@ -32,6 +34,7 @@ namespace ModernStore.Domain.CommandHandlers
 
             AddNotifications(order.Notifications);
 
+            //Step 3 - Update the database
             if (order.IsValid())
                 _orderRepository.Save(order);
         }

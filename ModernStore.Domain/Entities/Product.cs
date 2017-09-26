@@ -12,8 +12,6 @@ namespace ModernStore.Domain.Entities
             this.QuantityOnHand = quantityOnHand;
         }
 
-        public void DecreaseQuantity(int quantity) => this.QuantityOnHand -= quantity;
-
         public string Title { get; private set; }
 
         public decimal Price { get; private set; }
@@ -21,5 +19,7 @@ namespace ModernStore.Domain.Entities
         public string Image { get; private set; }
 
         public int QuantityOnHand { get; private set; }
+
+        public void DecreaseQuantity(int quantity) => this.QuantityOnHand -= quantity;
     }
 }
