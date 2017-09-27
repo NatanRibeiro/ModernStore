@@ -13,9 +13,9 @@ namespace ModernStore.Domain.Tests.Shared
         public readonly Email invalidEmail = new Email("");
 
         public readonly Document invaliDocument = new Document("1234567890");
-        public readonly Document validDocument = new Document("492281269");
+        public readonly Document validDocument = new Document("71936805286");
 
-        public readonly User user = new User("natan.dutra", "123456789");
+        public readonly User user = new User("natan.dutra", "123456789", "123456789");
 
         protected Customer GenerateNewCustomer()
         {

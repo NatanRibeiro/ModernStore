@@ -1,50 +1,33 @@
-﻿using System;
-using FluentValidator;
-using ModernStore.Domain.Commands;
+﻿using FluentValidator;
 using ModernStore.Shared.Commands;
 using ModernStore.Domain.Repositories;
 using ModernStore.Domain.ValueObjects;
 using ModernStore.Domain.Entities;
+using ModernStore.Domain.Services;
+using ModernStore.Domain.Resources;
+using ModernStore.Domain.Commands.Results;
+using ModernStore.Domain.Commands.Inputs;
 
-namespace ModernStore.Domain.CommandHandlers
+namespace ModernStore.Domain.Commands.Handlers
 {
-    public class CustomerCommandHandler : Notifiable, ICommandHandler<UpdateCustomerCommand>, ICommandHandler<RegisterCustomerCommand>
+    public class CustomerCommandHandler : Notifiable, ICommandHandler<RegisterCustomerCommand>
     {
         private readonly ICustomerRepository _customerRepository;
+        private readonly IEmailService _emailService;
 
-        public CustomerCommandHandler(ICustomerRepository customerRepository)
+        public CustomerCommandHandler(ICustomerRepository customerRepository, IEmailService emailService)
         {
             _customerRepository = customerRepository;
+            _emailService = emailService;
         }
 
-        public void Handle(UpdateCustomerCommand command)
-        {
-            //Step 1 - Check if already exists
-            var customer = _customerRepository.Get(command.Id);
-
-            //Step 2 - Check if exists
-            if (customer == null)
-            {
-                AddNotification("Customer", "Client not found");
-                return;
-            }
-
-            //Step 3 - Update the entity
-            var name = new Name(command.FirstName, command.LastName);
-            customer.Update(name, command.Birthdate);
-
-            //Step 4 - Update the database
-            if (IsValid())
-                _customerRepository.Update(customer);
-        }
-
-        public void Handle(RegisterCustomerCommand command)
+        public ICommandResult Handle(RegisterCustomerCommand command)
         {
             //Step 1 - Check if already exists
             if (_customerRepository.DocumentExists(command.Document))
             {
                 AddNotification("Document", "This document already is in use!");
-                return;
+                return null;
             }
 
             //Step 2 - Create a new client
@@ -66,9 +49,15 @@ namespace ModernStore.Domain.CommandHandlers
                 _customerRepository.Save(customer);
 
             //Step 5 - Send a Welcome email.
-            if (IsValid())
-                _customerRepository.Update(customer);
+            _emailService.Send(
+                customer.Name.ToString(), 
+                customer.Email.Address, 
+                string.Format(EmailTemplates.WelcomeEmailTitle, customer.Name), 
+                string.Format(EmailTemplates.WelcomeEmailBody, customer.Name)
+                );
 
+            //Step 6 - Return something
+            return new RegisterCustomerCommandResult(customer.Id, customer.Name.ToString());
         }
     }
 }

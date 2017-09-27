@@ -1,5 +1,5 @@
-﻿using ModernStore.Domain.CommandHandlers;
-using ModernStore.Domain.Commands;
+﻿using ModernStore.Domain.Commands.Inputs;
+using ModernStore.Domain.Commands.Handlers;
 using ModernStore.Domain.Entities;
 using ModernStore.Domain.Repositories;
 using ModernStore.Domain.ValueObjects;
@@ -63,9 +63,19 @@ namespace ModernStore
 
         public class FakeCustomerRepository : ICustomerRepository
         {
+            public bool DocumentExists(string document)
+            {
+                throw new NotImplementedException();
+            }
+
             public Customer Get(Guid id)
             {
                 return null;
+            }
+
+            public Customer Get(string document)
+            {
+                throw new NotImplementedException();
             }
 
             public Customer GetByUserId(Guid id)
@@ -73,9 +83,19 @@ namespace ModernStore
                 return new Customer(
                     new Name("Natan", "Dutra"),
                     new Email("natan_r.dutra@hotmail.com"),
-                    new Document("72546524135"),
-                    new User("natan.dutra", "123456789")
+                    new Document("71936805286"),
+                    new User("natan.dutra", "123456789", "123456789")
                     );
+            }
+
+            public void Save(Customer customer)
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Update(Customer customer)
+            {
+                throw new NotImplementedException();
             }
         }
     }

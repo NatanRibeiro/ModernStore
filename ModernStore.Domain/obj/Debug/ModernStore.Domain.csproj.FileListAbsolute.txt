@@ -12,5 +12,7 @@ D:\Dev\ModernStore\ModernStore.Domain\bin\Debug\FluentValidator.dll
 D:\Dev\ModernStore\ModernStore.Domain\bin\Debug\ModernStore.Shared.dll
 D:\Dev\ModernStore\ModernStore.Domain\bin\Debug\ModernStore.Shared.pdb
 D:\Dev\ModernStore\ModernStore.Domain\obj\Debug\ModernStore.Domain.csprojResolveAssemblyReference.cache
+D:\Dev\ModernStore\ModernStore.Domain\obj\Debug\ModernStore.Domain.Resources.EmailTemplates.resources
+D:\Dev\ModernStore\ModernStore.Domain\obj\Debug\ModernStore.Domain.csproj.GenerateResource.Cache
 D:\Dev\ModernStore\ModernStore.Domain\obj\Debug\ModernStore.Domain.dll
 D:\Dev\ModernStore\ModernStore.Domain\obj\Debug\ModernStore.Domain.pdb

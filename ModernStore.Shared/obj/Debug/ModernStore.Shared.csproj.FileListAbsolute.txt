@@ -4,3 +4,8 @@ D:\Dev\ModernStore\ModernStore\ModernStore.Shared\bin\Debug\FluentValidator.dll
 D:\Dev\ModernStore\ModernStore\ModernStore.Shared\obj\Debug\ModernStore.Shared.csprojResolveAssemblyReference.cache
 D:\Dev\ModernStore\ModernStore\ModernStore.Shared\obj\Debug\ModernStore.Shared.dll
 D:\Dev\ModernStore\ModernStore\ModernStore.Shared\obj\Debug\ModernStore.Shared.pdb
+D:\Dev\ModernStore\ModernStore.Shared\bin\Debug\ModernStore.Shared.dll
+D:\Dev\ModernStore\ModernStore.Shared\bin\Debug\ModernStore.Shared.pdb
+D:\Dev\ModernStore\ModernStore.Shared\bin\Debug\FluentValidator.dll
+D:\Dev\ModernStore\ModernStore.Shared\obj\Debug\ModernStore.Shared.dll
+D:\Dev\ModernStore\ModernStore.Shared\obj\Debug\ModernStore.Shared.pdb
