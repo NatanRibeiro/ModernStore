@@ -9,6 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernStore.Shared", "Moder
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernStore.Domain.Tests", "ModernStore.Domain.Tests\ModernStore.Domain.Tests.csproj", "{64FD524F-D349-487B-A823-76E61B16E8CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernStore.Infra", "ModernStore.Infra\ModernStore.Infra.csproj", "{4A5E5002-ACB1-4F61-A42A-5572A61FE0D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Api", "1 - Api", "{A3FF23AE-D6C9-4EC1-807A-E47EE831F6BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{AE1CC9E1-C10F-47FC-975B-B2F9503DF7C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{D40CD494-1672-429A-A3C7-A261CDC681E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +35,18 @@ Global
 		{64FD524F-D349-487B-A823-76E61B16E8CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64FD524F-D349-487B-A823-76E61B16E8CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64FD524F-D349-487B-A823-76E61B16E8CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A5E5002-ACB1-4F61-A42A-5572A61FE0D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A5E5002-ACB1-4F61-A42A-5572A61FE0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A5E5002-ACB1-4F61-A42A-5572A61FE0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A5E5002-ACB1-4F61-A42A-5572A61FE0D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5E6AD8AF-5AC1-4B57-ABEC-DEA320A14F4E} = {AE1CC9E1-C10F-47FC-975B-B2F9503DF7C8}
+		{F1A8CA96-0A49-4F60-B0F1-64E4D736403F} = {AE1CC9E1-C10F-47FC-975B-B2F9503DF7C8}
+		{64FD524F-D349-487B-A823-76E61B16E8CD} = {AE1CC9E1-C10F-47FC-975B-B2F9503DF7C8}
+		{4A5E5002-ACB1-4F61-A42A-5572A61FE0D9} = {D40CD494-1672-429A-A3C7-A261CDC681E1}
 	EndGlobalSection
 EndGlobal
