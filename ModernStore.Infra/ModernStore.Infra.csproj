@@ -47,9 +47,17 @@
   <ItemGroup>
     <Compile Include="Contexts\ModernStoreDataContext.cs" />
     <Compile Include="Mappings\CustomerMap.cs" />
-    <Compile Include="Migrations\201710050413478_first-migration.cs" />
-    <Compile Include="Migrations\201710050413478_first-migration.Designer.cs">
-      <DependentUpon>201710050413478_first-migration.cs</DependentUpon>
+    <Compile Include="Mappings\OrderItemMap.cs" />
+    <Compile Include="Mappings\OrderMap.cs" />
+    <Compile Include="Mappings\ProductMap.cs" />
+    <Compile Include="Mappings\UserMap.cs" />
+    <Compile Include="Migrations\201711020251058_first-migration.cs" />
+    <Compile Include="Migrations\201711020251058_first-migration.Designer.cs">
+      <DependentUpon>201711020251058_first-migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711020258110_second-migration.cs" />
+    <Compile Include="Migrations\201711020258110_second-migration.Designer.cs">
+      <DependentUpon>201711020258110_second-migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,8 +77,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710050413478_first-migration.resx">
-      <DependentUpon>201710050413478_first-migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711020251058_first-migration.resx">
+      <DependentUpon>201711020251058_first-migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711020258110_second-migration.resx">
+      <DependentUpon>201711020258110_second-migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

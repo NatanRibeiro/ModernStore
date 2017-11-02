@@ -6,6 +6,11 @@ namespace ModernStore.Domain.Entities
 {
     public class Customer : Entity
     {
+        protected Customer()
+        {
+            
+        }
+
         public Customer(Name name, Email email, Document document, User user)
         {
             this.Name = name;

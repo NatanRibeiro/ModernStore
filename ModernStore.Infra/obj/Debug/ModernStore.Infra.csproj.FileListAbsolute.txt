@@ -15,3 +15,4 @@ D:\Dev\Projects\ModernStore\ModernStore.Infra\obj\Debug\ModernStore.Infra.dll
 D:\Dev\Projects\ModernStore\ModernStore.Infra\obj\Debug\ModernStore.Infra.pdb
 D:\Dev\Projects\ModernStore\ModernStore.Infra\obj\Debug\ModernStore.Infra.Migrations.firstmigration.resources
 D:\Dev\Projects\ModernStore\ModernStore.Infra\obj\Debug\ModernStore.Infra.csproj.GenerateResource.Cache
+D:\Dev\Projects\ModernStore\ModernStore.Infra\obj\Debug\ModernStore.Infra.Migrations.secondmigration.resources
