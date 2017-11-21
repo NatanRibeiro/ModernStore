@@ -1,5 +1,6 @@
 ﻿using ModernStore.Domain.Entities;
 using System;
+using ModernStore.Domain.Commands.Results;
 
 namespace ModernStore.Domain.Repositories
 {
@@ -7,7 +8,7 @@ namespace ModernStore.Domain.Repositories
     {
         Customer Get(Guid id);
 
-        Customer Get(string document);
+        GetCustomerCommandResult Get(string username);
 
         Customer GetByUserId(Guid id);
 
