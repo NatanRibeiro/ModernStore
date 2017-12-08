@@ -3,3 +3,8 @@
 ################################################################################
 
 /ModernStore.Api/bin/Debug/net461
+/.vs/config/applicationhost.config
+/.vs/ModernStore/v15/Server/sqlite3/storage.ide-wal
+/.vs/ModernStore/v15/Server/sqlite3/storage.ide-shm
+/.vs/ModernStore/v15/Server/sqlite3/storage.ide
+/.vs/ModernStore/v15/Server/sqlite3/db.lock

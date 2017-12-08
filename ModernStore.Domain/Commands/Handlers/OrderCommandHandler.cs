@@ -35,9 +35,11 @@ namespace ModernStore.Domain.Commands.Handlers
 
             AddNotifications(order.Notifications);
 
+            if (!IsValid())
+                return null;
+
             //Step 3 - Update the database
-            if (IsValid())
-                _orderRepository.Save(order);
+            _orderRepository.Save(order);
 
             //Step 4 - Return something
             return new RegisterOrderCommandResult(order.Number);
