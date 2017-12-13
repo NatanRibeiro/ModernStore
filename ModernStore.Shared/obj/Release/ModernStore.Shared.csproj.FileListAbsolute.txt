@@ -1,0 +1,6 @@
+D:\Dev\Projects\ModernStore\ModernStore.Shared\bin\Release\ModernStore.Shared.dll
+D:\Dev\Projects\ModernStore\ModernStore.Shared\bin\Release\ModernStore.Shared.pdb
+D:\Dev\Projects\ModernStore\ModernStore.Shared\bin\Release\FluentValidator.dll
+D:\Dev\Projects\ModernStore\ModernStore.Shared\obj\Release\ModernStore.Shared.csproj.CoreCompileInputs.cache
+D:\Dev\Projects\ModernStore\ModernStore.Shared\obj\Release\ModernStore.Shared.dll
+D:\Dev\Projects\ModernStore\ModernStore.Shared\obj\Release\ModernStore.Shared.pdb

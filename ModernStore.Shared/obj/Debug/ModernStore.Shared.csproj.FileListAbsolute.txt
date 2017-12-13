@@ -13,5 +13,6 @@ D:\Dev\Projects\ModernStore\ModernStore.Shared\bin\Debug\ModernStore.Shared.dll
 D:\Dev\Projects\ModernStore\ModernStore.Shared\bin\Debug\ModernStore.Shared.pdb
 D:\Dev\Projects\ModernStore\ModernStore.Shared\bin\Debug\FluentValidator.dll
 D:\Dev\Projects\ModernStore\ModernStore.Shared\obj\Debug\ModernStore.Shared.csprojResolveAssemblyReference.cache
+D:\Dev\Projects\ModernStore\ModernStore.Shared\obj\Debug\ModernStore.Shared.csproj.CoreCompileInputs.cache
 D:\Dev\Projects\ModernStore\ModernStore.Shared\obj\Debug\ModernStore.Shared.dll
 D:\Dev\Projects\ModernStore\ModernStore.Shared\obj\Debug\ModernStore.Shared.pdb

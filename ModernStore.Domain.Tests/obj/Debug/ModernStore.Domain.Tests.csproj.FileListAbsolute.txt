@@ -47,5 +47,6 @@ D:\Dev\Projects\ModernStore\ModernStore.Domain.Tests\bin\Debug\ModernStore.Share
 D:\Dev\Projects\ModernStore\ModernStore.Domain.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 D:\Dev\Projects\ModernStore\ModernStore.Domain.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 D:\Dev\Projects\ModernStore\ModernStore.Domain.Tests\obj\Debug\ModernStore.Domain.Tests.csprojResolveAssemblyReference.cache
+D:\Dev\Projects\ModernStore\ModernStore.Domain.Tests\obj\Debug\ModernStore.Domain.Tests.csproj.CoreCompileInputs.cache
 D:\Dev\Projects\ModernStore\ModernStore.Domain.Tests\obj\Debug\ModernStore.Domain.Tests.dll
 D:\Dev\Projects\ModernStore\ModernStore.Domain.Tests\obj\Debug\ModernStore.Domain.Tests.pdb

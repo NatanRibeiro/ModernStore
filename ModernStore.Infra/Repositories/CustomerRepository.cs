@@ -7,6 +7,7 @@ using ModernStore.Domain.Commands.Results;
 using ModernStore.Domain.Entities;
 using ModernStore.Domain.Repositories;
 using ModernStore.Infra.Contexts;
+using ModernStore.Shared;
 
 namespace ModernStore.Infra.Repositories
 {
@@ -32,7 +33,7 @@ namespace ModernStore.Infra.Repositories
 
         GetCustomerCommandResult ICustomerRepository.Get(string username)
         {
-            using (SqlConnection conn = new SqlConnection(@""))
+            using (SqlConnection conn = new SqlConnection(Runtime.ConnectionString))
             {
                 conn.Open();
                 return conn.Query<GetCustomerCommandResult>(

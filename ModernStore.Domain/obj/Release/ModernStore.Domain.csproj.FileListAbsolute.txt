@@ -1,0 +1,11 @@
+D:\Dev\Projects\ModernStore\ModernStore.Domain\bin\Release\ModernStore.Domain.dll
+D:\Dev\Projects\ModernStore\ModernStore.Domain\bin\Release\ModernStore.Domain.pdb
+D:\Dev\Projects\ModernStore\ModernStore.Domain\bin\Release\FluentValidator.dll
+D:\Dev\Projects\ModernStore\ModernStore.Domain\bin\Release\ModernStore.Shared.dll
+D:\Dev\Projects\ModernStore\ModernStore.Domain\bin\Release\ModernStore.Shared.pdb
+D:\Dev\Projects\ModernStore\ModernStore.Domain\obj\Release\ModernStore.Domain.csprojResolveAssemblyReference.cache
+D:\Dev\Projects\ModernStore\ModernStore.Domain\obj\Release\ModernStore.Domain.Resources.EmailTemplates.resources
+D:\Dev\Projects\ModernStore\ModernStore.Domain\obj\Release\ModernStore.Domain.csproj.GenerateResource.Cache
+D:\Dev\Projects\ModernStore\ModernStore.Domain\obj\Release\ModernStore.Domain.csproj.CoreCompileInputs.cache
+D:\Dev\Projects\ModernStore\ModernStore.Domain\obj\Release\ModernStore.Domain.dll
+D:\Dev\Projects\ModernStore\ModernStore.Domain\obj\Release\ModernStore.Domain.pdb

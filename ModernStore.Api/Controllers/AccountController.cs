@@ -41,7 +41,7 @@ namespace ModernStore.Api.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        [Route("v1/authenticate")]
+        [Route("api/authenticate")]
         public async Task<IActionResult> Post([FromForm] AuthenticateUserCommand command)
         {
             if (command == null)
