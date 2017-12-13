@@ -8,6 +8,8 @@ namespace ModernStore.Domain.Repositories
     {
         Customer Get(Guid id);
 
+        Customer GetByUsername(string username);
+
         GetCustomerCommandResult Get(string username);
 
         Customer GetByUserId(Guid id);

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ModernStore.Domain.Commands.Handlers;
 using ModernStore.Domain.Commands.Inputs;
 using ModernStore.Infra.Transactions;
@@ -14,6 +15,7 @@ namespace ModernStore.Api.Controllers
 
         [HttpPost]
         [Route("api/customer")]
+        [AllowAnonymous]
         public async Task<IActionResult> Post([FromBody]RegisterCustomerCommand command)
         {
             var result = _handler.Handle(command);

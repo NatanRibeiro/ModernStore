@@ -16,8 +16,7 @@ namespace ModernStore.Domain.Entities
             this.Password = EncryptPassword(password);
             this.Active = true;
 
-            new ValidationContract<User>(this)
-                .AreEquals(x => x.Password, EncryptPassword(confirmPassword), "The Password and Confirmation Password are not equals");
+            new ValidationContract<User>(this).AreEquals(x => x.Password, EncryptPassword(confirmPassword), "The Password and Confirmation Password are not equals");
         }
 
         public string Username { get; private set; }
@@ -29,6 +28,15 @@ namespace ModernStore.Domain.Entities
         public void Activate() => this.Active = true;
 
         public void DeActivate() => this.Active = false;
+
+        public bool Authenticate (string username, string password)
+        {
+            if (Username == username && Password == EncryptPassword(password))
+                return true;
+
+            AddNotification("User", "User or password invalid!");
+            return false;
+        }
 
         private static string EncryptPassword(string pass)
         {

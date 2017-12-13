@@ -28,6 +28,8 @@ namespace ModernStore.Infra.Repositories
 
         public void Save(Customer customer) => _context.Customers.Add(customer);
 
+        public Customer GetByUsername(string username) => _context.Customers.Include(x => x.User).AsNoTracking().FirstOrDefault(x => x.User.Username == username);
+
         GetCustomerCommandResult ICustomerRepository.Get(string username)
         {
             using (SqlConnection conn = new SqlConnection(@""))
