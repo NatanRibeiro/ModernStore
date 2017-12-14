@@ -10,7 +10,7 @@ namespace ModernStore.Api.Controllers
     {
         private readonly OrderCommandHandler _handler;
 
-        OrderController(IUow uow, RegisterOrderCommand hadler) : base(uow) => _handler = _handler;
+        public OrderController(IUow uow, RegisterOrderCommand hadler) : base(uow) => _handler = _handler;
 
         [HttpPost]
         [Route("api/order")]

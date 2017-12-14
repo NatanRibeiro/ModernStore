@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -61,15 +62,31 @@ namespace ModernStore.Api
                 options.SigningCredentials = new SigningCredentials(_sigingKey, SecurityAlgorithms.HmacSha256);
             });
 
-            //services.AddAuthentication(options =>
-            //{
-            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            //}).AddJwtBearer(options =>
-            //{
-            //    options.Audience = AUDIENCE;
-            //    options.Authority = Configuration["MySettings:Auth0Settings:Authority"];
-            //});
+            services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.Audience = Configuration.GetSection("TokenProviderOptions:Audience").Value;
+                options.ClaimsIssuer = Configuration.GetSection("TokenProviderOptions:Issuer").Value;
+                options.SaveToken = true;
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidIssuer = ISSUER,
+
+                    ValidateAudience = true,
+                    ValidAudience = AUDIENCE,
+
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = _sigingKey,
+
+                    RequireExpirationTime = true,
+                    ValidateLifetime = true,
+
+                    ClockSkew = System.TimeSpan.Zero
+                };
+            });
 
             services.AddScoped<ModernStoreDataContext, ModernStoreDataContext>();
             services.AddTransient<IUow, Uow>();
@@ -88,23 +105,6 @@ namespace ModernStore.Api
         {
             if (env.IsDevelopment())
                 app.UseDeveloperExceptionPage();
-
-            var tokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateIssuer = true,
-                ValidIssuer = ISSUER,
-
-                ValidateAudience = true,
-                ValidAudience = AUDIENCE,
-
-                ValidateIssuerSigningKey = true,
-                IssuerSigningKey = _sigingKey,
-
-                RequireExpirationTime = true,
-                ValidateLifetime = true,
-
-                ClockSkew = System.TimeSpan.Zero
-            };
 
             app.UseCors(x =>
             {

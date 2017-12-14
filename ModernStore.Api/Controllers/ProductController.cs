@@ -7,7 +7,7 @@ namespace ModernStore.Api.Controllers
     {
         private readonly IProductRepository _repository;
 
-        ProductController(IProductRepository repository) => _repository = repository;
+        public ProductController(IProductRepository repository) => _repository = repository;
 
         [HttpGet]
         [Route("api/products")]

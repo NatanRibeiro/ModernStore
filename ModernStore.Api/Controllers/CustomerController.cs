@@ -11,11 +11,11 @@ namespace ModernStore.Api.Controllers
     {
         private readonly CustomerCommandHandler _handler;
 
-        CustomerController(IUow uow, CustomerCommandHandler handler) : base(uow) => _handler = handler;
+        public CustomerController(IUow uow, CustomerCommandHandler handler) : base(uow) => _handler = handler;
 
         [HttpPost]
-        [Route("api/customer")]
         [AllowAnonymous]
+        [Route("api/customer")]
         public async Task<IActionResult> Post([FromBody]RegisterCustomerCommand command)
         {
             var result = _handler.Handle(command);
