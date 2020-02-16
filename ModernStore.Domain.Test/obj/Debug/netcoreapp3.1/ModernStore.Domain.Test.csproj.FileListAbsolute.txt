@@ -1,0 +1,3 @@
+/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Domain.Test/obj/Debug/netcoreapp3.1/ModernStore.Domain.Test.csprojAssemblyReference.cache
+/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Domain.Test/obj/Debug/netcoreapp3.1/ModernStore.Domain.Test.AssemblyInfoInputs.cache
+/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Domain.Test/obj/Debug/netcoreapp3.1/ModernStore.Domain.Test.AssemblyInfo.cs

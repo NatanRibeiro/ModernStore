@@ -1,0 +1,140 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Api/ModernStore.Api.csproj": {}
+  },
+  "projects": {
+    "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Api/ModernStore.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Api/ModernStore.Api.csproj",
+        "projectName": "ModernStore.Api",
+        "projectPath": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Api/ModernStore.Api.csproj",
+        "packagesPath": "/Users/natandutra/.nuget/packages/",
+        "outputPath": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Api/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/natandutra/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Infra/ModernStore.Infra.csproj": {
+                "projectPath": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Infra/ModernStore.Infra.csproj"
+              },
+              "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Shared/ModernStore.Shared.csproj": {
+                "projectPath": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Shared/ModernStore.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "FluentValidator": {
+              "target": "Package",
+              "version": "[2.0.4, )"
+            },
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Domain/ModernStore.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Domain/ModernStore.Domain.csproj",
+        "projectName": "ModernStore.Domain",
+        "projectPath": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Domain/ModernStore.Domain.csproj",
+        "projectStyle": "PackagesConfig",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Shared/ModernStore.Shared.csproj": {
+                "projectPath": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Shared/ModernStore.Shared.csproj"
+              }
+            }
+          }
+        },
+        "packagesConfigPath": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Domain/packages.config"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Infra/ModernStore.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Infra/ModernStore.Infra.csproj",
+        "projectName": "ModernStore.Infra",
+        "projectPath": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Infra/ModernStore.Infra.csproj",
+        "projectStyle": "PackagesConfig",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Domain/ModernStore.Domain.csproj": {
+                "projectPath": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Domain/ModernStore.Domain.csproj"
+              },
+              "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Shared/ModernStore.Shared.csproj": {
+                "projectPath": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Shared/ModernStore.Shared.csproj"
+              }
+            }
+          }
+        },
+        "packagesConfigPath": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Infra/packages.config"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Shared/ModernStore.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Shared/ModernStore.Shared.csproj",
+        "projectName": "ModernStore.Shared",
+        "projectPath": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Shared/ModernStore.Shared.csproj",
+        "projectStyle": "PackagesConfig",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {}
+          }
+        },
+        "packagesConfigPath": "/Users/natandutra/Projects/Exp/ModernStore/ModernStore.Shared/packages.config"
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    }
+  }
+}

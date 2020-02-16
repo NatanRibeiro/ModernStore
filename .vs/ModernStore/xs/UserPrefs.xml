@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{625E1D65-5CAC-4416-8299-CD48A71070F6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ModernStore.Domain.Test/Shared/Entities.cs">
+    <Files>
+      <File FileName="ModernStore.Domain.Test/UnitTest1.cs" Line="1" Column="1" />
+      <File FileName="ModernStore.Domain.Test/Shared/Entities.cs" Line="1" Column="1" />
+      <File FileName="ModernStore.Domain.Test/CustomerTests.cs" Line="27" Column="9" />
+      <File FileName="ModernStore.Domain.Test/OrderTests.cs" Line="1" Column="1" />
+      <File FileName="ModernStore.Domain.Test/packages.config" Line="6" Column="12" />
+      <File FileName="ModernStore.Infra/packages.config" Line="1" Column="1" />
+      <File FileName="ModernStore.Infra/Contexts/ModernStoreDataContext.cs" Line="31" Column="1" />
+      <File FileName="ModernStore.Infra/App.config" Line="1" Column="1" />
+      <File FileName="ModernStore.Infra/ModernStore.Data/Program.cs" Line="1" Column="1" />
+      <File FileName="ModernStore.Infra/ModernStore.Data/Startup.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ModernStore" expanded="True">
+            <Node name="2 - Domain" expanded="True">
+              <Node name="ModernStore.Domain.Test" expanded="True" />
+            </Node>
+            <Node name="3 - Infra" expanded="True">
+              <Node name="ModernStore.Data" expanded="True" />
+              <Node name="ModernStore.Infra" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.1_220-_220Api.ModernStore.Api PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
